@@ -7,8 +7,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gopcua/opcua"
-	"github.com/gopcua/opcua/ua"
+	"github.com/zheleziv/opcua"
+	"github.com/zheleziv/opcua/ua"
 )
 
 // TestWrite performs an integration test to first write

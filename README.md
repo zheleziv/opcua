@@ -1,5 +1,5 @@
 <p align="center">
-   <img width="25%" src="https://raw.githubusercontent.com/gopcua/opcua/master/gopher.png">
+   <img width="25%" src="https://raw.githubusercontent.com/zheleziv/opcua/master/gopher.png">
 </p>
 
 <p align="center">
@@ -15,10 +15,10 @@ A native Go implementation of the OPC/UA Binary Protocol.
 We support the current and previous major Go release.
 See below for a list of [Tested Platforms](#tested-platforms) and [Supported Features](#supported-features).
 
-[![GitHub](https://github.com/gopcua/opcua/workflows/gopuca/badge.svg)](https://github.com/gopcua/opcua/actions)
-[![Go Reference](https://pkg.go.dev/badge/github.com/gopcua/opcua.svg)](https://pkg.go.dev/github.com/gopcua/opcua)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/gopcua/opcua/blob/master/LICENSE)
-[![Version](https://img.shields.io/github/tag/gopcua/opcua.svg?color=blue&label=version)](https://github.com/gopcua/opcua/releases)
+[![GitHub](https://github.com/zheleziv/opcua/workflows/gopuca/badge.svg)](https://github.com/zheleziv/opcua/actions)
+[![Go Reference](https://pkg.go.dev/badge/github.com/zheleziv/opcua.svg)](https://pkg.go.dev/github.com/zheleziv/opcua)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/zheleziv/opcua/blob/master/LICENSE)
+[![Version](https://img.shields.io/github/tag/zheleziv/opcua.svg?color=blue&label=version)](https://github.com/zheleziv/opcua/releases)
 
 ## v0.5.x BREAKING CHANGES
 
@@ -43,7 +43,7 @@ Your GOPCUA Team
 
 ```sh
 # install library
-go get -u github.com/gopcua/opcua
+go get -u github.com/zheleziv/opcua
 
 # get current date and time 'ns=0;i=2258'
 go run examples/datetime/datetime.go -endpoint opc.tcp://localhost:4840
@@ -65,17 +65,17 @@ The `gopcua` project is sponsored by the following organizations by supporting t
    <tr valign="middle">
       <td width="33%">
         <a href="https://northvolt.com/">
-          <img alt="Northvolt" src="https://raw.githubusercontent.com/gopcua/opcua/main/logo/northvolt.png">
+          <img alt="Northvolt" src="https://raw.githubusercontent.com/zheleziv/opcua/main/logo/northvolt.png">
         </a>
       </td>
       <td width="34%">
         <a href="https://www.evosoft.com/">
-          <img alt="evosoft" src="https://raw.githubusercontent.com/gopcua/opcua/main/logo/evosoft.png">
+          <img alt="evosoft" src="https://raw.githubusercontent.com/zheleziv/opcua/main/logo/evosoft.png">
         </a>
       </td>
       <td width="33%">
         <a href="https://www.intelecy.com/">
-          <img alt="Intelecy AS" src="https://raw.githubusercontent.com/gopcua/opcua/main/logo/intelecy.png">
+          <img alt="Intelecy AS" src="https://raw.githubusercontent.com/zheleziv/opcua/main/logo/intelecy.png">
         </a>
       </td>
    </tr>
@@ -111,8 +111,8 @@ However, you can safely assume that we are aiming to make the APIs as
 stable as possible since the code is in use in several large scale
 production environments.
 
-The [Current State](https://github.com/gopcua/opcua/wiki/Current-State) was moved
-to the [Wiki](https://github.com/gopcua/opcua/wiki).
+The [Current State](https://github.com/zheleziv/opcua/wiki/Current-State) was moved
+to the [Wiki](https://github.com/zheleziv/opcua/wiki).
 
 ## Your Help is Appreciated
 
@@ -215,11 +215,11 @@ Here is the current set of supported services. For low-level access use the clie
 
 ## Authors
 
-The [Gopcua Team](https://github.com/gopcua/opcua/graphs/contributors).
+The [Gopcua Team](https://github.com/zheleziv/opcua/graphs/contributors).
 
 If you need to get in touch with us directly you may find us on [Keybase.io](https://keybase.io)
 but try to create an issue first.
 
 ## License
 
-[MIT](https://github.com/gopcua/opcua/blob/master/LICENSE)
+[MIT](https://github.com/zheleziv/opcua/blob/master/LICENSE)

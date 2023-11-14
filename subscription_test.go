@@ -3,14 +3,14 @@ package opcua
 import (
 	"testing"
 
-	"github.com/gopcua/opcua/ua"
+	"github.com/zheleziv/opcua/ua"
 )
 
-// Running tool: /Users/frank/sdk/go1.17.1/bin/go test -benchmem -run=^$ -bench ^BenchmarkUnmonitorItems$ github.com/gopcua/opcua
+// Running tool: /Users/frank/sdk/go1.17.1/bin/go test -benchmem -run=^$ -bench ^BenchmarkUnmonitorItems$ github.com/zheleziv/opcua
 
 // goos: darwin
 // goarch: arm64
-// pkg: github.com/gopcua/opcua
+// pkg: github.com/zheleziv/opcua
 // BenchmarkUnmonitorItems/slice-8         	51153620	        24.03 ns/op	      20 B/op	       0 allocs/op
 // --- BENCH: BenchmarkUnmonitorItems/slice-8
 //     subscription_test.go:29: src 1 dst 0
@@ -33,7 +33,7 @@ import (
 //     subscription_test.go:75: src 500000
 //     subscription_test.go:75: src 19942775
 // PASS
-// ok  	github.com/gopcua/opcua	116.192s
+// ok  	github.com/zheleziv/opcua	116.192s
 
 func BenchmarkUnmonitorItems(b *testing.B) {
 	b.Run("slice", func(b *testing.B) {

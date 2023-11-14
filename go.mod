@@ -1,18 +1,13 @@
 module github.com/zheleziv/opcua
 
-go 1.20
+go 1.21.0
 
 require (
-	github.com/gopcua/opcua v0.5.2
+	github.com/zheleziv/opcua v0.5.2
 	github.com/pascaldekloe/goe v0.1.1
 	github.com/pkg/errors v0.9.1
-	golang.org/x/exp v0.0.0-20230522175609-2e198f4a06a1
-	golang.org/x/term v0.8.0
+	golang.org/x/exp v0.0.0-20231110203233-9a3e6036ecaa
+	golang.org/x/term v0.14.0
 )
 
-require golang.org/x/sys v0.8.0 // indirect
-
-retract (
-	v0.2.5 // https://github.com/gopcua/opcua/issues/538
-	v0.2.4 // https://github.com/gopcua/opcua/issues/538
-)
+require golang.org/x/sys v0.14.0 // indirect

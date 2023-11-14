@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gopcua/opcua"
-	"github.com/gopcua/opcua/monitor"
-	"github.com/gopcua/opcua/ua"
+	"github.com/zheleziv/opcua"
+	"github.com/zheleziv/opcua/monitor"
+	"github.com/zheleziv/opcua/ua"
 )
 
 const (

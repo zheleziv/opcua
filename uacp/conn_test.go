@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gopcua/opcua/errors"
 	"github.com/pascaldekloe/goe/verify"
+	"github.com/zheleziv/opcua/errors"
 )
 
 func TestConn(t *testing.T) {

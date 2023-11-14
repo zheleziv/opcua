@@ -9,12 +9,13 @@ import (
 	_ "crypto/sha1"
 	_ "crypto/sha256"
 
-	"github.com/gopcua/opcua/ua"
+	"github.com/zheleziv/opcua/ua"
 )
 
 // messageLen = (keyLenBits / 8) - 2*(hashLenBits / 8) - 2
 // paddingLen = keyLen - messageLen
-//            = 2*hashLenBytes + 2
+//
+//	= 2*hashLenBytes + 2
 const (
 	RSAOAEPMinPaddingSHA1   = (2 * 20) + 2
 	RSAOAEPMinPaddingSHA256 = (2 * 64) + 2

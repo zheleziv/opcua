@@ -12,9 +12,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/gopcua/opcua"
-	"github.com/gopcua/opcua/debug"
-	"github.com/gopcua/opcua/ua"
+	"github.com/zheleziv/opcua"
+	"github.com/zheleziv/opcua/debug"
+	"github.com/zheleziv/opcua/ua"
 )
 
 func main() {

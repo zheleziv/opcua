@@ -11,12 +11,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gopcua/opcua/id"
-	"github.com/gopcua/opcua/ua"
-	"github.com/gopcua/opcua/uacp"
-	"github.com/gopcua/opcua/uapolicy"
-	"github.com/gopcua/opcua/uatest"
 	"github.com/pascaldekloe/goe/verify"
+	"github.com/zheleziv/opcua/id"
+	"github.com/zheleziv/opcua/ua"
+	"github.com/zheleziv/opcua/uacp"
+	"github.com/zheleziv/opcua/uapolicy"
+	"github.com/zheleziv/opcua/uatest"
 )
 
 func TestNewRequestMessage(t *testing.T) {

@@ -6,8 +6,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/gopcua/opcua/ua"
 	"github.com/pascaldekloe/goe/verify"
+	"github.com/zheleziv/opcua/ua"
 )
 
 func newExpVarInt(i int64) *expvar.Int {

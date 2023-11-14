@@ -13,8 +13,8 @@ import (
 	"io"
 	"sort"
 
-	"github.com/gopcua/opcua/errors"
-	"github.com/gopcua/opcua/ua"
+	"github.com/zheleziv/opcua/errors"
+	"github.com/zheleziv/opcua/ua"
 )
 
 // SupportedPolicies returns all supported Security Policies

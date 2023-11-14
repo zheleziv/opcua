@@ -10,8 +10,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/gopcua/opcua/ua"
 	"github.com/pascaldekloe/goe/verify"
+	"github.com/zheleziv/opcua/ua"
 )
 
 // CodecTestCase describes a test case for a encoding and decoding an

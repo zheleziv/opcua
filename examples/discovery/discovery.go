@@ -8,8 +8,8 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"github.com/gopcua/opcua"
-	"github.com/gopcua/opcua/debug"
+	"github.com/zheleziv/opcua"
+	"github.com/zheleziv/opcua/debug"
 	"log"
 )
 

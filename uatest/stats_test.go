@@ -10,8 +10,8 @@ import (
 
 	"github.com/pascaldekloe/goe/verify"
 
-	"github.com/gopcua/opcua"
-	"github.com/gopcua/opcua/stats"
+	"github.com/zheleziv/opcua"
+	"github.com/zheleziv/opcua/stats"
 )
 
 func newExpVarInt(i int64) *expvar.Int {

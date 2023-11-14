@@ -7,7 +7,7 @@ package uasc
 import (
 	"fmt"
 
-	"github.com/gopcua/opcua/ua"
+	"github.com/zheleziv/opcua/ua"
 )
 
 // SequenceHeader represents a Sequence Header in OPC UA Secure Conversation.

@@ -12,11 +12,11 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/gopcua/opcua"
-	"github.com/gopcua/opcua/debug"
-	"github.com/gopcua/opcua/errors"
-	"github.com/gopcua/opcua/id"
-	"github.com/gopcua/opcua/ua"
+	"github.com/zheleziv/opcua"
+	"github.com/zheleziv/opcua/debug"
+	"github.com/zheleziv/opcua/errors"
+	"github.com/zheleziv/opcua/id"
+	"github.com/zheleziv/opcua/ua"
 )
 
 type NodeDef struct {
