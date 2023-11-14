@@ -186,6 +186,7 @@ type Client struct {
 //
 // https://godoc.org/github.com/zheleziv/opcua#Option
 func NewClient(endpoint string, opts ...Option) (*Client, error) {
+	fmt.Println("hello")
 	cfg, err := ApplyConfig(opts...)
 	if err != nil {
 		return nil, err
