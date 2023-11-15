@@ -12,6 +12,7 @@ import (
 	"log"
 	"os"
 	"strings"
+	"time"
 
 	"golang.org/x/exp/slices"
 )
@@ -25,7 +26,7 @@ var Flags = os.Getenv("OPC_DEBUG")
 var Enable bool = FlagSet("debug")
 
 // Logger logs the debug messages when debug logging is enabled.
-var Logger = log.New(os.Stderr, "debug: ", 0)
+var Logger = log.New(os.Stderr, fmt.Sprintf("%v:debug: ", time.Now()), 0)
 
 // PrefixLogger returns a new debug logger when debug logging is enabled.
 // Otherwise, a discarding logger is returned.
@@ -33,7 +34,7 @@ func NewPrefixLogger(format string, args ...interface{}) *log.Logger {
 	if !Enable {
 		return log.New(io.Discard, "", 0)
 	}
-	return log.New(os.Stderr, "debug: "+fmt.Sprintf(format, args...), 0)
+	return log.New(os.Stderr, fmt.Sprintf("%v:debug: ", time.Now())+fmt.Sprintf(format, args...), 0)
 }
 
 // Printf logs the message with Logger.Printf() when debug logging is enabled.

@@ -452,7 +452,7 @@ func (s *SecureChannel) getInstancesBySecureChannelID(id uint32) []*channelInsta
 	cpy := make([]*channelInstance, len(instances))
 	copy(cpy, instances)
 
-	return cpy
+	return instances
 }
 
 func (s *SecureChannel) LocalEndpoint() string {
@@ -573,10 +573,14 @@ func (s *SecureChannel) handleOpenSecureChannelResponse(resp *ua.OpenSecureChann
 	s.instancesMu.Lock()
 	defer s.instancesMu.Unlock()
 
+	fmt.Printf("do %v", s.instances)
+
 	s.instances[resp.SecurityToken.ChannelID] = append(
 		s.instances[resp.SecurityToken.ChannelID],
 		s.openingInstance,
 	)
+
+	fmt.Printf("posle %v", s.instances)
 
 	s.activeInstance = instance
 
