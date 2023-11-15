@@ -395,6 +395,7 @@ func (s *SecureChannel) readChunk() (*MessageChunk, error) {
 		return nil, errors.Errorf("sechan: unknown message type: %s", m.MessageType)
 	}
 
+	fmt.Println(s.instances)
 	// Decrypt the block and put data back into m.Data
 	m.Data, err = s.verifyAndDecrypt(m, b, decryptWith)
 	if err != nil {
@@ -631,7 +632,7 @@ func (s *SecureChannel) scheduleExpiration(instance *channelInstance) {
 	const expireAfter = 1.25
 	when := instance.createdAt.Add(time.Second * time.Duration(instance.revisedLifetime.Seconds()*expireAfter))
 
-	debug.Printf("uasc %d: security token expires at %s. channelID=%d tokenID=%d", s.c.ID(), when.UTC().Format(time.RFC3339), instance.secureChannelID, instance.securityTokenID)
+	debug.Printf("uasc %d: security token expires at %s. channelID=%d tokenID=%d -- %s", s.c.ID(), when.UTC().Format(time.RFC3339), instance.secureChannelID, instance.securityTokenID, time.Now().UTC().Format(time.RFC3339))
 
 	t := time.NewTimer(time.Until(when))
 	defer t.Stop()
