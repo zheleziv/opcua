@@ -9,6 +9,7 @@ import (
 	"crypto/rsa"
 	"crypto/x509"
 	"encoding/binary"
+	"fmt"
 	"io"
 	"math"
 	"sync"
@@ -382,10 +383,13 @@ func (s *SecureChannel) readChunk() (*MessageChunk, error) {
 
 		s.cfg.SecurityPolicyURI = m.SecurityPolicyURI
 
+		fmt.Printf("Set sec policy on URi: %s", s.cfg.SecurityPolicyURI)
+
 		decryptWith = s.openingInstance
 	case "CLO":
 		return nil, io.EOF
 	case "MSG":
+		fmt.Println("msg chunk:", m)
 		// noop
 	default:
 		return nil, errors.Errorf("sechan: unknown message type: %s", m.MessageType)
@@ -412,6 +416,8 @@ func (s *SecureChannel) verifyAndDecrypt(m *MessageChunk, b []byte, instance *ch
 	if instance != nil {
 		return instance.verifyAndDecrypt(m, b)
 	}
+
+	fmt.Println(s.instances)
 
 	instances := s.getInstancesBySecureChannelID(m.MessageHeader.SecureChannelID)
 	if len(instances) == 0 {
@@ -446,7 +452,7 @@ func (s *SecureChannel) getInstancesBySecureChannelID(id uint32) []*channelInsta
 	cpy := make([]*channelInstance, len(instances))
 	copy(cpy, instances)
 
-	return instances
+	return cpy
 }
 
 func (s *SecureChannel) LocalEndpoint() string {
