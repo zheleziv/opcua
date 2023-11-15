@@ -634,7 +634,10 @@ func (s *SecureChannel) scheduleExpiration(instance *channelInstance) {
 
 	debug.Printf("uasc %d: security token expires at %s. channelID=%d tokenID=%d -- %s", s.c.ID(), when.UTC().Format(time.RFC3339), instance.secureChannelID, instance.securityTokenID, time.Now().UTC().Format(time.RFC3339))
 
-	x := when.UTC().Unix() - time.Now().UTC().Unix()
+	x := when.UTC().UnixMicro() - time.Now().UTC().UnixMicro()
+
+	fmt.Println(x)
+
 	t := time.NewTimer(time.Duration(x))
 	defer t.Stop()
 
