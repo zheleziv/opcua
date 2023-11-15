@@ -573,14 +573,14 @@ func (s *SecureChannel) handleOpenSecureChannelResponse(resp *ua.OpenSecureChann
 	s.instancesMu.Lock()
 	defer s.instancesMu.Unlock()
 
-	fmt.Printf("do %v", s.instances)
+	fmt.Printf("do %v \n", s.instances)
 
 	s.instances[resp.SecurityToken.ChannelID] = append(
 		s.instances[resp.SecurityToken.ChannelID],
 		s.openingInstance,
 	)
 
-	fmt.Printf("posle %v", s.instances)
+	fmt.Printf("posle %v \n", s.instances)
 
 	s.activeInstance = instance
 
