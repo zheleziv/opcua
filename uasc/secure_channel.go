@@ -643,6 +643,8 @@ func (s *SecureChannel) scheduleExpiration(instance *channelInstance) {
 	case <-t.C:
 	}
 
+	fmt.Printf("-------------------instance expired %v \n", instance)
+
 	s.instancesMu.Lock()
 	defer s.instancesMu.Unlock()
 
